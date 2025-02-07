@@ -1,0 +1,64 @@
+#signup{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    margin: 2px;
+    
+}
+
+a{
+    color: white;
+    text-decoration: underline;
+}
+
+header{
+    padding: 20px;
+    display: flex;
+    font-weight: 700;
+    font-size: 25.2px;
+    justify-content: space-between;
+    width: 24px;
+    height: 24px;
+    top: 54px;
+    left: 16px;
+    gap: 15px;
+    opacity: 0px;
+}
+
+h1{
+    font-family: Integral CF;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+p{
+    font-family: Satoshi;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+
+}
+
+button{
+    background-color: black;
+    color: white;
+    width: Fixed(358px);
+    height: Fixed(52px);
+    top: 325px;
+    left: 16px;
+    border-radius: 62px;
+    padding: 16px 54px 16px 54px;
+
+}
