@@ -1,8 +1,38 @@
+/* mobile first */
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.5em;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Integral";
+    src: url("../../fonts/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "Satoshi";
+    src: url("../../fonts/Satoshi-Variable.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+}
+
 #signup{
     background-color: black;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-family:'I';
+    font-size: 13px;
     text-align: center;
     padding: 10px;
     margin: 2px;
@@ -12,6 +42,7 @@
 a{
     color: white;
     text-decoration: underline;
+    font-family: 'Satoshi'
 }
 
 header{
@@ -26,39 +57,630 @@ header{
     left: 16px;
     gap: 15px;
     opacity: 0px;
+
+    & .logo{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        height: auto;
+        font-family: 'Satoshi';
+
+    }
+
+    & .menu{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    & .search-bar{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-right: auto;
+    }
 }
 
 h1{
-    font-family: Integral CF;
-    font-size: 36px;
+    font-family: 'Integral';
+    font-size: 4.5rem;
     font-weight: 700;
-    line-height: 34px;
+    line-height: 35px;
+    padding: 10px;;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
 }
 
-p{
-    font-family: Satoshi;
-    font-size: 14px;
+p.promotional{
+    flex-wrap: wrap;
     font-weight: 400;
+    font-size: 15px;   
+    opacity: 60%;
+    padding: 0px 10px 20px 15px;
+}
+
+
+
+#shop-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background: black;
+    color: white;
+    border-radius: 30px;
+    padding: 15px 60px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+}
+
+.performance{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 10px;
+    justify-content: center;
+    width: 90%;
+}
+
+.stat{
+    width: 30%;
+    height: fit-content;
+    padding: 0%;
+    align-content: start;
+    margin: 30px 0px 0px 0px;
+    
+}
+
+.performance p.number{
+    font-family: 'Satoshi', Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.performance p.text{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
     line-height: 20px;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
-
 }
 
-button{
+.container{
+    width: 1px;
+    margin: 40px 20px;
+    height: 90px;
+    background: rgb(165, 165, 165);
+}
+
+.brands-bar{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    & img{
+        width: auto;
+        padding: 9px;
+    }
+}
+
+
+
+.new-arrivals{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & h2{
+        font-family: 'Integral';
+        line-height: 2px;
+    }
+
+    & .slider{
+        display: flex;
+        flex-direction: row;
+    }
+
+    & #product1{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        position: relative;
+        gap: 5px;
+
+        & h3{
+            font-size: 15px;
+        }
+
+        .rating{
+
+        }
+        
+        
+        & img{
+            min-width: 30%;
+            min-height: 30%;
+            height: 60%;
+            padding: 10px;
+            border-radius: 20px;
+        } 
+    }
+
+    & #product2{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    
+        & img{
+            min-width: 30%;
+            min-height: 30%;
+            height: 60%;
+            padding: 10px;
+            border-radius: 20px;
+        } 
+
+        & h3{
+            font-size: 15px;
+        }
+
+
+    }
+
+    & #product3, #product4{
+        display: none;
+    }
+
+    & h2{
+        padding: 20px;
+        text-align: center;
+        min-width: 100%;
+        flex-grow: 2;
+        font-size: 3rem;
+    }
+
+    & .view-all{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        color: black;
+        border-radius: 30px;
+        border: 1px solid gray;
+        padding: 15px 0px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    & .rating {
+        display: flex;
+        margin: 5px 0;
+        align-items: center;
+    }    
+
+    & span {
+        opacity: 60%;
+        margin-left: 5px;
+    }
+
+    & .price {
+        font-size: clamp(20px, 2vw, 24px);
+    }
+
+    & p.price, div.price > p:nth-child(1) {
+      font-weight: 700;
+    }
+
+    & div.price > p:nth-child(2) {
+        text-decoration: line-through;
+        opacity: 60%;
+    }
+    
+    
+}
+
+.top-selling{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & h2{
+        font-family: 'Integral';
+        line-height: 2px;
+    }
+
+    & .slider{
+        display: flex;
+        flex-direction: row;
+    }
+
+    & #tp-product1{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        position: relative;
+        gap: 5px;
+
+        & h3{
+            font-size: 15px;
+        }
+
+        .rating{
+
+        }
+        
+        
+        & img{
+            min-width: 30%;
+            min-height: 30%;
+            height: 60%;
+            padding: 10px;
+            border-radius: 20px;
+        } 
+    }
+
+    & #tp-product2{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    
+        & img{
+            min-width: 30%;
+            min-height: 30%;
+            height: 60%;
+            padding: 10px;
+            border-radius: 20px;
+        } 
+
+        & h3{
+            font-size: 15px;
+        }
+
+
+    }
+
+    & #tp-product3, #tp-product4{
+        display: none;
+    }
+
+    & h2{
+        padding: 20px;
+        text-align: center;
+        min-width: 100%;
+        flex-grow: 2;
+        font-size: 3rem;
+    }
+
+    & .view-all{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        color: black;
+        border-radius: 30px;
+        border: 1px solid gray;
+        padding: 15px 0px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    & .rating {
+        display: flex;
+        margin: 5px 0;
+        align-items: center;
+    }    
+
+    & span {
+        opacity: 60%;
+        margin-left: 5px;
+    }
+
+    & .price {
+        font-size: clamp(20px, 2vw, 24px);
+    }
+
+    & p.price, div.price > p:nth-child(1) {
+      font-weight: 700;
+    }
+
+    & div.price > p:nth-child(2) {
+        text-decoration: line-through;
+        opacity: 60%;
+    }
+    
+    
+}
+
+#browse-styles {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--gray-color);
+    border-radius: 20px;
+    margin-top: 50px;
+  
+    & h1 {
+      padding: 40px 0;
+      text-align: center;
+      width: 80%;
+      margin: 0 auto;
+      flex-grow: 2;
+      font-size: 3rem;
+    }
+  
+    & .styles {
+      width: 100%;
+  
+      & figure {
+        width: 90%;
+        height: 210px;
+        margin: 0 auto;
+  
+        & img {
+          width: 100%;
+          height: 190px;
+          object-fit: cover;
+          border-radius: 15px;
+        }
+  
+        & figcaption {
+          font-weight: 700;
+          position: relative;
+          top: -200px;
+          font-size: 3rem;
+          padding: 20px;
+        }
+      }
+    }
+}
+
+
+
+.reviews {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 50px 5%;
+
+    & h1 {
+        font-size: clamp(32px, 2vw, 48px);
+        width: 80%;
+    }
+
+    & #review1{
+        border: 1px solid gray;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 30px;
+
+        & .stars {
+            display: flex;
+            margin-bottom: 10px;
+            gap: 3px;
+        }
+
+        & li {
+            list-style: none;
+
+            & figure {
+                & img {
+                width: 20px;
+                height: 20px;
+                }
+            }
+        }
+
+        & .username {
+            width: 150px;
+            display: flex;
+            align-items: center;
+            & h2 {
+                font-size: clamp(16px, 2vw, 20px);
+                margin-right: 10px;
+                margin-bottom: 5px;
+            }
+        }
+
+        & blockquote {
+            font-size: clamp(14px, 2vw, 16px);
+            opacity: 60%;
+        }
+        
+    }
+}
+
+
+#newsletter{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
     background-color: black;
     color: white;
-    width: Fixed(358px);
-    height: Fixed(52px);
-    top: 325px;
-    left: 16px;
-    border-radius: 62px;
-    padding: 16px 54px 16px 54px;
+    padding: 25px;
+    margin-bottom: 35px;
+    border-radius: 28px;
 
+    & h1{
+        font-size: 35px;
+        margin-bottom: 20px;
+        font-family: 'Integral';
+    }
+
+    & #email-input{
+        width: 100%;
+        height: 42px;
+        background-color: white;
+        color: black;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+
+        & input{
+            border: none;
+            outline: none;
+            height: 60%;
+            width: 100%;
+            font-size: 14px;
+        }
+
+    }
+
+    & button {
+        width: 100%;
+        height: 42px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 0 15px;
+        margin-top: 5px;
+        border: none;
+        font-size: 14px;
+        font-weight: 540;
+        cursor: pointer;
+    }
+
+    & figure{
+        margin-right: 15px;
+        width: 24px;
+    }
+
+    & img{
+        align-items: center;
+    }
+}
+
+#info{
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    & h1 {
+        font-size: 29px;
+    }
+
+    & p {
+        opacity: 60%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    & #social-media {
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      & figure {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+      }
+      
+    }
+
+    & #links {
+        font-size: 12px;
+        width: 40%;
+        margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+
+        & h2 {
+            letter-spacing: 1px;
+            padding: 10px 10px 2px 0px;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: clamp(14px, 2vw, 16px);
+            margin-bottom: 10px;
+            font-family: 'Satoshi';
+        }
+
+        & li {
+          margin-bottom: 15px;
+          opacity: 60%;
+          list-style: none;
+        }
+
+        & ul{
+            padding: 0px;
+        }
+
+        & a{
+            text-decoration: none;
+            color: gray;
+            font-size: 13px;
+            font-family: 'Satoshi';
+        }
+    }
+
+    #company-info, #user-help{
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        padding: 30px;
+
+    }
+
+    & #faq, #rsc {
+        border-bottom: 2px solid black;
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        padding: 30px;
+    }
+}
+
+& #copyright {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 70px;
+
+    & p {
+      text-align: center;
+      font-size: 14px;
+      opacity: 60%;
+      margin-bottom: 10px;
+    }
+
+    & #payments {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+
+        & figure {
+        height: 26px;
+            & img {
+                width: 40px;
+                height: 26px;
+            }
+        }
+    }
+}
+
+
+.message {
+    margin-top: 15px;
+    color: green;
+    font-size: 14px;
+}
+
+.error {
+    color: red;
 }
